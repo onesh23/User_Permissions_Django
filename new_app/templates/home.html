@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    <div class="container jumbotron">
+        <div class="row">
+            <div class="col">
+                <h1 class="display-1">Get Login As Per User Role </h1>
+                <h1 class="display-3">To See What User's Got Permissions</h1>
+                <div class="d-flex justify-content-around">
+                    <button class="btn btn-warning btn-lg "><a href="{% url 'login_view' %}" class="text-decoration-none">Login</a></button>
+                    <button class="btn btn-warning btn-lg "><a href="{% url 'register' %}" class="text-decoration-none">Register</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

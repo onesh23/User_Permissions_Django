@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    <div class="container">
+        <!-- <h1>Edit Here</h1> -->
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-8 col-sm-10 bg-info p-5">
+                <div>
+                    <div class="form">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="vehicle_number" class="form-label">Vehicle Number</label>
+                            <input type="text" class="form-control" id="vehicle_number" value="{{data.vehicle_number}}" name="vehicle_number" />
+                        </div>
+                        <div class="form-group">
+                            <label for="vehicle_type" class="form-label">Vehicle Type</label>
+                            <input type="text" class="form-control" id="vehicle_type" value="{{data.Vehicle_type}}" name="vehicle_type" />
+                        </div>
+                        <div class="form-group">
+                            <label for="vehicle_model" class="form-label">Vehicle Model</label>
+                            <input type="text" class="form-control" id="vehicle_model" value="{{data.vehicle_model}}" name="vehicle_model" />
+                        </div>
+                        <div class="form-group">
+                            <label for="vehicle_description" class="form-label">Vehicle Model</label>
+                            <textarea type="text" rows="6" cols="10" class="form-control" id="vehicle_description" name="vehicle_description" >{{data.vehicle_description}}</textarea>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button class="btn btn-success w-100" type="submit">Save Changes</button>
+                        </div>
+                    </form> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
